@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "KMP-mixpanel",
+    name: "mixpanelLib",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "KMP-mixpanel",
-            targets: ["KMP-mixpanel", "mixpanelLib"]),
+            name: "mixpanelLib",
+            targets: ["mixpanelLib"]),
     ],
     dependencies: [
              .package(
@@ -23,11 +23,6 @@ let package = Package(
         .binaryTarget(
                  name: "mixpanelLib",
                  url: "https://github.com/YouSee/TV-KMP-Artifactory/raw/refs/heads/main/mixpanelLib.xcframework.zip",
-                 checksum:"da45ba9671dfc104b6d2a3d4dc7215c937d77bdcdcddb9f8e765b94940ec0619"),
-        .target(
-            name: "KMP-mixpanel"),
-        .testTarget(
-            name: "KMP-mixpanelTests",
-            dependencies: ["KMP-mixpanel"]),
+                 checksum:"da45ba9671dfc104b6d2a3d4dc7215c937d77bdcdcddb9f8e765b94940ec0619")
     ]
 )
