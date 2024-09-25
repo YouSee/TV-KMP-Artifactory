@@ -23,7 +23,10 @@ let package = Package(
                  url:"https://github.com/YouSee/TV-KMP-Artifactory/raw/refs/heads/main/mixpanelLib.xcframework.zip",
                  checksum:"da45ba9671dfc104b6d2a3d4dc7215c937d77bdcdcddb9f8e765b94940ec0619"),
         .target(name: "MixpanelLibWrapper",
-                    dependencies: ["Mixpanel", "mixpanelLib"],
+                    dependencies: [
+                        .target(name: "mixpanelLib"),
+                        .product(name: "mixpanel-iphone", package: "mixpanel-iphone")
+                    ],
                     path: "Sources/MixpanelLibWrapper"
                    )
     ]
