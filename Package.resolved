@@ -1,0 +1,15 @@
+{
+  "originHash" : "992998deab54053d36ee33f398fd2ced51af29b7eaad11c45da16b38e6d8d32a",
+  "pins" : [
+    {
+      "identity" : "mixpanel-iphone",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mixpanel/mixpanel-iphone",
+      "state" : {
+        "revision" : "8fc7115d3294a29ded42926301d5d45c417d8113",
+        "version" : "5.0.7"
+      }
+    }
+  ],
+  "version" : 3
+}

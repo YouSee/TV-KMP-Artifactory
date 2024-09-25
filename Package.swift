@@ -12,23 +12,21 @@ let package = Package(
             targets: ["MixpanelLibWrapper"]),
     ],
     dependencies: [
-             .package(
-                 url: "https://github.com/mixpanel/mixpanel-iphone",
-                 from: "2.8.0"
-             )
+        .package(url: "https://github.com/mixpanel/mixpanel-iphone", .upToNextMajor(from: "5.0.0")),
          ],
     targets: [
         .binaryTarget(
                  name: "mixpanelLib",
                  url:"https://github.com/YouSee/TV-KMP-Artifactory/raw/refs/heads/main/mixpanelLib.xcframework.zip",
                  checksum:"da45ba9671dfc104b6d2a3d4dc7215c937d77bdcdcddb9f8e765b94940ec0619"),
-        .target(name: "MixpanelLibWrapper",
-                    dependencies: [
-                        .target(name: "mixpanelLib"),
-                        .product(name: "mixpanel-iphone", package: "mixpanel-iphone")
-                    ],
-                    path: "Sources/MixpanelLibWrapper"
-                   )
+        .target(
+            name: "MixpanelLibWrapper",
+            dependencies: [
+                .target(name: "mixpanelLib"),
+                .product(name: "Mixpanel", package: "mixpanel-iphone")
+            ],
+            path: "Sources/MixpanelLibWrapper"
+        ),
     ]
 )
 
