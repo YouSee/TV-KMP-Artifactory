@@ -18,7 +18,7 @@ let package = Package(
         .binaryTarget(
                  name: "mixpanelLib",
                  url:"https://github.com/YouSee/TV-KMP-Artifactory/raw/refs/heads/main/mixpanelLib.xcframework.zip",
-                 checksum:"ee5fed1da01690f51b3116bd6b21e0b101a7fd487b3bd5a96bc4c00b174a8cbe"),
+                 checksum:"016569fde8b7e0867b7614214151af8ba9b0daccb76365c5cf02dd1ac20d221f"),
         .target(
             name: "MixpanelLibWrapper",
             dependencies: [
